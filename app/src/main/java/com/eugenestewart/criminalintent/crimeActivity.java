@@ -1,11 +1,23 @@
 package com.eugenestewart.criminalintent;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
+import android.app.Fragment;
 
-public class crimeActivity extends SingleFragmentActivity {
+import java.util.UUID;
+
+public class CrimeActivity extends SingleFragmentActivity {
+    public static final  String EXTRA_Crime_ID= "com";
+
+    public static Intent newIntent(Context packageContext, UUID crimeId){
+        Intent intent = new Intent(packageContext, CrimeActivity.class);
+        intent.putExtra(EXTRA_Crime_ID,crimeId);
+        return intent;
+    }
 
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +33,7 @@ public class crimeActivity extends SingleFragmentActivity {
 //    }
     @Override
     protected Fragment createFragment(){
-        return new CrimeFragment();
+        UUID crimeID=(UUID) getIntent().getSerializableExtra(EXTRA_Crime_ID);
+        return CrimeFragment.newInstance(crimeID);
     }
 }

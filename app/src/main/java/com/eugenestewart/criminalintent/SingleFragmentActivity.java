@@ -9,7 +9,7 @@ import android.support.v4.app.FragmentManager;
  * Created by nappy on 9/24/2016.
  */
 
-public abstract class SingleFragmentActivity extends FragmentActivity {
+public abstract class SingleFragmentActivity extends FragmActivity {
     protected abstract Fragment createFragment();
     @Override
     public void onCreate(Bundle savedInstanceState){

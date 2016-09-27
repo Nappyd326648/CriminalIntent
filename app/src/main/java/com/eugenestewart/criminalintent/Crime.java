@@ -9,6 +9,7 @@ import java.util.UUID;
 public class Crime {
     private UUID mId;
     private String mTitle;
+    private boolean mSolved;
 
 
     public Crime(){
@@ -25,5 +26,9 @@ public class Crime {
 
     public void setmTitle(String title) {
         mTitle = title;
+    }
+
+    public void setSolved(boolean solved) {
+        mSolved = solved;
     }
 }

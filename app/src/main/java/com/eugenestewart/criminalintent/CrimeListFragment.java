@@ -15,6 +15,7 @@ import java.util.List;
  */
 
 public class CrimeListFragment extends Fragment {
+    private static final int REQUEST_CRIME = 1;
     private RecyclerView mCrimeRecyclerView;
     private CrimeAdapter mAdapter;
     private TextView mTitleTextView;
@@ -24,7 +25,7 @@ public class CrimeListFragment extends Fragment {
     private class CrimeAdapter extends RecyclerView.Adapter<CrimeHolder>{
 
 
-        private static final int REQUEST_CRIME = 1;
+
 
         @Override
         public CrimeHolder onCreateViewHolder(ViewGroup parent,int viewType){
