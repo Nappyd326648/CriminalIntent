@@ -1,6 +1,6 @@
 package com.eugenestewart.criminalintent;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 
 /**
  * Created by nappy on 9/24/2016.
