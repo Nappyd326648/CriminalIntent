@@ -7,7 +7,12 @@
         android:icon="@mipmap/ic_launcher"
         android:label="CriminalIntent"
         android:theme="@style/AppTheme" >
+        <activity
+            android:name=".CrimeActivity"
+            android:label="CriminalIntent">
+            </activity>
         <activity android:name=".CrimeListActivity">
+
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
