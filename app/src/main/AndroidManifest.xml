@@ -2,15 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.eugenestewart.criminalintent" >
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18"/>
+    <uses-feature android:name="android.hardware.camera"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="CriminalIntent"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".CrimeActivity"
-            android:label="CriminalIntent">
-            </activity>
+            android:name=".CrimePagerActivity"
+            android:label="CriminalIntent"
+            android:parentActivityName=".CrimeListActivity">
+        </activity>
         <activity android:name=".CrimeListActivity">
 
 
